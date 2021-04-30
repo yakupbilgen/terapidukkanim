@@ -5,7 +5,12 @@ import '../screen/bottomappbar/contact.dart';
 import '../screen/bottomappbar/home.dart';
 import '../screen/bottomappbar/personel.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   int bottomNavigatorBarIndex = 0;
 
   bottomNavigatorBarSelectedItem(int selectedIndex) {
