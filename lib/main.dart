@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-main(List<String> args) {
-  runApp(MyApp());
-}
+import './screen/homepage_screen.dart';
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
+main(List<String> args) {
+runApp(MaterialApp(
+  initialRoute: "/",
+  routes: {
+    "/":(context)=> HomePage(),
+  },
+))  ;
 }
