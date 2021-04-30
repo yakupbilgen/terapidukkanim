@@ -1,13 +1,35 @@
 import 'package:flutter/material.dart';
 
+import '../screen/bottomappbar/about_us.dart';
+import '../screen/bottomappbar/contact.dart';
+import '../screen/bottomappbar/home.dart';
+import '../screen/bottomappbar/personel.dart';
 
 class HomePage extends StatelessWidget {
+  int bottomNavigatorBarIndex = 0;
+
+  bottomNavigatorBarSelectedItem(int selectedIndex) {
+    switch (selectedIndex) {
+      case 0:
+        return AppBarHomeScreen();
+        break;
+      case 1:
+        return AppBarPersonelScreen();
+        break;
+      case 2:
+        return AppBarAboutUsScreen();
+        break;
+      case 3:
+        return AppBarContactScreen();
+        break;
+      default: return AppBarHomeScreen();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-     
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.blue,
         selectedItemColor: Colors.white,
