@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int bottomNavigatorBarIndex = 0;
+  int selectedIndex = 0;
 
   bottomNavigatorBarSelectedItem(int selectedIndex) {
     switch (selectedIndex) {
@@ -27,7 +27,8 @@ class _HomePageState extends State<HomePage> {
       case 3:
         return AppBarContactScreen();
         break;
-      default: return AppBarHomeScreen();
+      default:
+        return AppBarHomeScreen();
     }
   }
 
@@ -35,7 +36,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      body: bottomNavigatorBarSelectedItem(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.shifting,
+        currentIndex: selectedIndex,
         backgroundColor: Colors.blue,
         selectedItemColor: Colors.white,
         items: [
@@ -60,6 +64,11 @@ class _HomePageState extends State<HomePage> {
             label: 'İletişim',
           ),
         ],
+        onTap: (int index) {
+          selectedIndex = index;
+        setState(() {
+          
+        });},
       ),
     );
   }
