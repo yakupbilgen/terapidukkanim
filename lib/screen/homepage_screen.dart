@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         return AboutUsScreenBottomBar();
         break;
       case 3:
-        return ContactScreenBottomBar;
+        return ContactScreenBottomBar();
         break;
       default:
         return HomeScreenBottomBar();
