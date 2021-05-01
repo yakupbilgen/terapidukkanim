@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../screen/bottomappbar/about_us.dart';
 import '../screen/bottomappbar/contact.dart';
@@ -35,7 +36,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(FontAwesomeIcons.instagram),
+            onPressed: () {},
+          )
+        ],
+        title: Text('Terapi Dükkanım'),
+      ),
       body: bottomNavigatorBarSelectedItem(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
@@ -60,7 +70,7 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             backgroundColor: Colors.blue,
-            icon: Icon(Icons.contact_mail),
+            icon: Icon(Icons.contact_phone),
             label: 'İletişim',
           ),
         ],
