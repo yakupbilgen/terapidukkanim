@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppBarContactScreen extends StatelessWidget {
+class ContactScreenBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

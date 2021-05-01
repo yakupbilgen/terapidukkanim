@@ -16,19 +16,19 @@ class _HomePageState extends State<HomePage> {
   bottomNavigatorBarSelectedItem(int selectedIndex) {
     switch (selectedIndex) {
       case 0:
-        return AppBarHomeScreen();
+        return HomeScreenBottomBar();
         break;
       case 1:
-        return AppBarPersonelScreen();
+        return PersonelScreenBottomBar();
         break;
       case 2:
-        return AppBarAboutUsScreen();
+        return AboutUsScreenBottomBar();
         break;
       case 3:
-        return AppBarContactScreen();
+        return ContactScreenBottomBar;
         break;
       default:
-        return AppBarHomeScreen();
+        return HomeScreenBottomBar();
     }
   }
 

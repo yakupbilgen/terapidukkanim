@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppBarAboutUsScreen extends StatelessWidget {
+class AboutUsScreenBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
