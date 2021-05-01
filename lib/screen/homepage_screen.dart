@@ -66,9 +66,8 @@ class _HomePageState extends State<HomePage> {
         ],
         onTap: (int index) {
           selectedIndex = index;
-        setState(() {
-          
-        });},
+          setState(() {});
+        },
       ),
     );
   }
