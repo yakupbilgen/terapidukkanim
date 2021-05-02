@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:terapidukkanim/widgets/services_screen_text.dart';
+
+import '../../widgets/services_screen_text.dart';
 
 class ServicesScreenBottomBar extends StatelessWidget {
   @override
@@ -32,9 +33,9 @@ class ServicesScreenBottomBar extends StatelessWidget {
                   height: 20,
                 ),
                 ElevatedButton(
-                  onPressed: () =>
-                      Navigator.pushNamed(context, "/appointmentScreen"),
-                  child: Text('Randevu Almak İçin Tıklayın')),
+                    onPressed: () =>
+                        Navigator.pushNamed(context, "/appointmentScreen"),
+                    child: Text('Randevu Almak İçin Tıklayın')),
               ],
             ),
           ),

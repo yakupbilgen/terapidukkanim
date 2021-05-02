@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:terapidukkanim/widgets/personel_widget.dart';
+
+import '../../widgets/personel_widget.dart';
 
 class PersonelScreenBottomBar extends StatelessWidget {
   @override

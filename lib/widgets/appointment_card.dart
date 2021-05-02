@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../widgets/open_url_widget.dart';
 
 class AppointmentCardWidget extends StatelessWidget {

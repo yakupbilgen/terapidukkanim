@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:terapidukkanim/widgets/open_url_widget.dart';
 
-import 'bottomappbar/services.dart';
+import './bottomappbar/services.dart';
+import '../widgets/open_url_widget.dart';
 import '../screen/bottomappbar/contact.dart';
 import '../screen/bottomappbar/home.dart';
 import '../screen/bottomappbar/personel.dart';

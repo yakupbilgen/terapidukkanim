@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:terapidukkanim/widgets/appointment_card.dart';
+
+import '../widgets/appointment_card.dart';
 
 class AppointmentScreen extends StatelessWidget {
   final String appBarTitle = 'Online Randevu Al';
-  final String yetiskinLinkUrl="https://www.terapidukkanim.com/bookings-checkout/bireysel-terapi-yeti%C5%9Fkin/book";
-  final String ergenLinkUrl="https://www.terapidukkanim.com/bookings-checkout/bireysel-terapi-ergen/book";
-  final String ebeveynLinkUrl="https://www.terapidukkanim.com/service-page/yap%C4%B1land%C4%B1r%C4%B1lm%C4%B1%C5%9F-oyun-terapisi-ebeveyn";
+  final String yetiskinLinkUrl =
+      "https://www.terapidukkanim.com/bookings-checkout/bireysel-terapi-yeti%C5%9Fkin/book";
+  final String ergenLinkUrl =
+      "https://www.terapidukkanim.com/bookings-checkout/bireysel-terapi-ergen/book";
+  final String ebeveynLinkUrl =
+      "https://www.terapidukkanim.com/service-page/yap%C4%B1land%C4%B1r%C4%B1lm%C4%B1%C5%9F-oyun-terapisi-ebeveyn";
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +23,9 @@ class AppointmentScreen extends StatelessWidget {
             child: Column(
           children: [
             AppointmentCardWidget(
-              theraphyImage: 'bireysel_terapi_yetiskin.png',
-              therapyName: 'Bireysel Terapi (Yetişkin)',
-              theraphyUrl: yetiskinLinkUrl
-            ),
+                theraphyImage: 'bireysel_terapi_yetiskin.png',
+                therapyName: 'Bireysel Terapi (Yetişkin)',
+                theraphyUrl: yetiskinLinkUrl),
             AppointmentCardWidget(
               theraphyImage: 'bireysel_terapi_ergen.png',
               therapyName: 'Bireysel Terapi (Ergen)',
