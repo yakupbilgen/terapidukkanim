@@ -36,8 +36,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    String instagramUrl="https://www.instagram.com/terapidukkaniofficial/";
-    
+    String instagramUrl = "https://www.instagram.com/terapidukkaniofficial/";
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -58,22 +58,22 @@ class _HomePageState extends State<HomePage> {
         items: [
           BottomNavigationBarItem(
             backgroundColor: Colors.blue,
-            icon: Icon(Icons.home),
+            icon: Icon(FontAwesomeIcons.home),
             label: 'Anasayfa',
           ),
           BottomNavigationBarItem(
             backgroundColor: Colors.blue,
-            icon: Icon(Icons.people_alt),
+            icon: Icon(FontAwesomeIcons.users),
             label: 'Personel',
           ),
           BottomNavigationBarItem(
             backgroundColor: Colors.blue,
-            icon: Icon(Icons.source),
-            label: 'Hakkımızda',
+            icon: Icon(FontAwesomeIcons.star),
+            label: 'Hizmetlerimiz',
           ),
           BottomNavigationBarItem(
             backgroundColor: Colors.blue,
-            icon: Icon(Icons.contact_phone),
+            icon: Icon(FontAwesomeIcons.mailBulk),
             label: 'İletişim',
           ),
         ],
