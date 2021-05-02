@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:terapidukkanim/widgets/open_url_widget.dart';
 
 import '../screen/bottomappbar/about_us.dart';
 import '../screen/bottomappbar/contact.dart';
@@ -35,13 +36,15 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    String instagramUrl="https://www.instagram.com/terapidukkaniofficial/";
+    
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         actions: [
           IconButton(
             icon: Icon(FontAwesomeIcons.instagram),
-            onPressed: () {},
+            onPressed: () => openUrl(instagramUrl),
           )
         ],
         title: Text('Terapi Dükkanım'),
