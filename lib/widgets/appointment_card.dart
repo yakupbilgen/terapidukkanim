@@ -7,18 +7,22 @@ class AppointmentCardWidget extends StatelessWidget {
       @required this.therapyName,
       @required this.theraphyUrl})
       : super(key: key);
-String theraphyImage;
-String therapyName;
-String theraphyUrl;
+
+  String theraphyImage;
+  String therapyName;
+  String theraphyUrl;
+  
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Column(
-        children: [
-          Image.asset("assets/images/${theraphyImage}"),
-          Text('terapi türü'),
-          ElevatedButton(onPressed: () {}, child: Text('Hemen Yer Ayırtın'))
-        ],
+    return SingleChildScrollView(
+      child: Card(
+        child: Column(
+          children: [
+            Image.asset("assets/images/$theraphyImage"),
+            Center(child: Text(therapyName)),
+            ElevatedButton(onPressed: () {}, child: Text('Hemen Yer Ayırtın'))
+          ],
+        ),
       ),
     );
   }

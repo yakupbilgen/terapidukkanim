@@ -14,23 +14,21 @@ class AppointmentScreen extends StatelessWidget {
         child: Center(
             child: Column(
           children: [
-            Text('data'),
             AppointmentCardWidget(
-              theraphyImage: 'imageAsset',
+              theraphyImage: 'bireysel_terapi_yetiskin.png',
               therapyName: 'Bireysel Terapi\n(Yetişkin)',
               theraphyUrl: 'linkUrl',
             ),
             AppointmentCardWidget(
-              theraphyImage: 'imageAsset',
-              therapyName: 'Bireysel Terapi|n(Ergen)',
+              theraphyImage: 'bireysel_terapi_ergen.png',
+              therapyName: 'Bireysel Terapi\n(Ergen)',
               theraphyUrl: 'linkUrl',
             ),
             AppointmentCardWidget(
-              theraphyImage: 'imageAsset',
+              theraphyImage: 'yapilandirilmis_oyun_terapisi.png',
               therapyName: 'Yapılandırılmış Oyun Terapisi\n(Ebeveyn)',
               theraphyUrl: 'linkUrl',
             ),
-            Text('data'),
           ],
         )),
       ),
