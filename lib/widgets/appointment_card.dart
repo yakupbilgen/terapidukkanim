@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/open_url_widget.dart';
 
 class AppointmentCardWidget extends StatelessWidget {
   AppointmentCardWidget(
@@ -11,7 +12,7 @@ class AppointmentCardWidget extends StatelessWidget {
   String theraphyImage;
   String therapyName;
   String theraphyUrl;
-  
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -19,8 +20,14 @@ class AppointmentCardWidget extends StatelessWidget {
         child: Column(
           children: [
             Image.asset("assets/images/$theraphyImage"),
-            Center(child: Text(therapyName,style: TextStyle(fontWeight: FontWeight.bold),)),
-            ElevatedButton(onPressed: () {}, child: Text('Hemen Yer Ayırtın'))
+            Center(
+                child: Text(
+              therapyName,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            )),
+            ElevatedButton(
+                onPressed: () => openUrl(theraphyUrl),
+                child: Text('Hemen Yer Ayırtın'))
           ],
         ),
       ),
