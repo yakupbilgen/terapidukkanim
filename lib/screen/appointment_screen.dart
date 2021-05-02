@@ -13,21 +13,23 @@ class AppointmentScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
             child: Column(
-          
           children: [
             Text('data'),
             AppointmentCardWidget(
-                imageAsset: 'imageAsset',
-                contentText: 'Bireysel Terapi\n(Yetişkin)',
-                linkUrl: 'linkUrl'),
+              theraphyImage: 'imageAsset',
+              therapyName: 'Bireysel Terapi\n(Yetişkin)',
+              theraphyUrl: 'linkUrl',
+            ),
             AppointmentCardWidget(
-                imageAsset: 'imageAsset',
-                contentText: 'Bireysel Terapi|n(Ergen)',
-                linkUrl: 'linkUrl'),
+              theraphyImage: 'imageAsset',
+              therapyName: 'Bireysel Terapi|n(Ergen)',
+              theraphyUrl: 'linkUrl',
+            ),
             AppointmentCardWidget(
-                imageAsset: 'imageAsset',
-                contentText: 'Yapılandırılmış Oyun Terapisi\n(Ebeveyn)',
-                linkUrl: 'linkUrl'),
+              theraphyImage: 'imageAsset',
+              therapyName: 'Yapılandırılmış Oyun Terapisi\n(Ebeveyn)',
+              theraphyUrl: 'linkUrl',
+            ),
             Text('data'),
           ],
         )),
