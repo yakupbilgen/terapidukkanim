@@ -20,13 +20,23 @@ class HomeScreenBottomBar extends StatelessWidget {
                 title,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: Theme.of(context).textTheme.headline6.fontSize,
+                  fontSize: Theme.of(context).textTheme.headline5.fontSize,
                 ),
               ),
               SizedBox(height: 10),
-              Text(subTitle),
+              Text(
+                subTitle,
+                style: TextStyle(
+                  fontSize: Theme.of(context).textTheme.headline6.fontSize,
+                ),
+              ),
               SizedBox(height: 50),
-              Text(contentTitle),
+              Text(
+                contentTitle,
+                style: TextStyle(
+                  fontSize: Theme.of(context).textTheme.headline6.fontSize,
+                ),
+              ),
               SizedBox(height: 10),
               Text(
                 contentSubTitle,
@@ -34,7 +44,7 @@ class HomeScreenBottomBar extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: Theme.of(context).textTheme.headline6.fontSize),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 10),
               ElevatedButton(
                   onPressed: () =>
                       Navigator.pushNamed(context, "/appointmentScreen"),
