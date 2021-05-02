@@ -19,7 +19,7 @@ class AppointmentCardWidget extends StatelessWidget {
         child: Column(
           children: [
             Image.asset("assets/images/$theraphyImage"),
-            Center(child: Text(therapyName)),
+            Center(child: Text(therapyName,style: TextStyle(fontWeight: FontWeight.bold),)),
             ElevatedButton(onPressed: () {}, child: Text('Hemen Yer Ayırtın'))
           ],
         ),
