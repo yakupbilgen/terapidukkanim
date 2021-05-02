@@ -16,11 +16,13 @@ class HomeScreenBottomBar extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              Text(title,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize:
-                          Theme.of(context).textTheme.headline6.fontSize)),
+              Text(
+                title,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: Theme.of(context).textTheme.headline6.fontSize,
+                ),
+              ),
               SizedBox(height: 10),
               Text(subTitle),
               SizedBox(height: 50),
