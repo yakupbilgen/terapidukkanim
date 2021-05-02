@@ -9,9 +9,9 @@ class AppointmentCardWidget extends StatelessWidget {
       @required this.theraphyUrl})
       : super(key: key);
 
-  String theraphyImage;
-  String therapyName;
-  String theraphyUrl;
+  final String theraphyImage;
+  final String therapyName;
+  final String theraphyUrl;
 
   @override
   Widget build(BuildContext context) {

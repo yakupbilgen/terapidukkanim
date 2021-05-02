@@ -4,11 +4,9 @@ import '../../widgets/contact_screen_text.dart';
 import '../../widgets/open_url_widget.dart';
 
 class ContactScreenBottomBar extends StatelessWidget {
-  String mailAdress = "iletisim@terapidukkanim.com";
+  final String mailAdress = "iletisim@terapidukkanim.com";
   @override
   Widget build(BuildContext context) {
-    Size deviceSize = MediaQuery.of(context).size;
-
     return Center(
       child: Column(
         children: [

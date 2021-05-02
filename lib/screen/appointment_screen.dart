@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:terapidukkanim/widgets/appointment_card.dart';
 
 class AppointmentScreen extends StatelessWidget {
-  String appBarTitle = 'Online Randevu Al';
-  String yetiskinLinkUrl="https://www.terapidukkanim.com/bookings-checkout/bireysel-terapi-yeti%C5%9Fkin/book";
-  String ergenLinkUrl="https://www.terapidukkanim.com/bookings-checkout/bireysel-terapi-ergen/book";
-  String ebeveynLinkUrl="https://www.terapidukkanim.com/service-page/yap%C4%B1land%C4%B1r%C4%B1lm%C4%B1%C5%9F-oyun-terapisi-ebeveyn";
+  final String appBarTitle = 'Online Randevu Al';
+  final String yetiskinLinkUrl="https://www.terapidukkanim.com/bookings-checkout/bireysel-terapi-yeti%C5%9Fkin/book";
+  final String ergenLinkUrl="https://www.terapidukkanim.com/bookings-checkout/bireysel-terapi-ergen/book";
+  final String ebeveynLinkUrl="https://www.terapidukkanim.com/service-page/yap%C4%B1land%C4%B1r%C4%B1lm%C4%B1%C5%9F-oyun-terapisi-ebeveyn";
 
   @override
   Widget build(BuildContext context) {
