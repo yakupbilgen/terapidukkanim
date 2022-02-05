@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:terapidukkanim/widgets/float_action_bottom.dart';
 
 import '../widgets/appointment_card.dart';
 
@@ -39,6 +40,7 @@ class AppointmentScreen extends StatelessWidget {
           ],
         )),
       ),
+      floatingActionButton: MyFBA(),
     );
   }
 }

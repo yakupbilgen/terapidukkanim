@@ -55,13 +55,12 @@ class PersonelScreenBottomBar extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          titleSpacing: 0,
           centerTitle: true,
-          title: const Text('Personelimiz'),
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
                 icon: CircleAvatar(child: Image.asset(elifNurImage)),
-                iconMargin: EdgeInsets.all(100),
               ),
               Tab(
                 icon: CircleAvatar(child: Image.asset(ayseImage)),
