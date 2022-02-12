@@ -3,8 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'open_url_widget.dart';
 
-class MyFBA extends StatelessWidget {
-  const MyFBA({Key key}) : super(key: key);
+class MyFAB extends StatelessWidget {
+  const MyFAB({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

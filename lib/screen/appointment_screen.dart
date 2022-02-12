@@ -40,7 +40,7 @@ class AppointmentScreen extends StatelessWidget {
           ],
         )),
       ),
-      floatingActionButton: MyFBA(),
+      floatingActionButton: MyFAB(),
     );
   }
 }
