@@ -21,24 +21,25 @@ class AppointmentScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Center(
-            child: Column(
-          children: [
-            AppointmentCardWidget(
-                theraphyImage: 'bireysel_terapi_yetiskin.png',
-                therapyName: 'Bireysel Terapi (Yetişkin)',
-                theraphyUrl: yetiskinLinkUrl),
-            AppointmentCardWidget(
-              theraphyImage: 'bireysel_terapi_ergen.png',
-              therapyName: 'Bireysel Terapi (Ergen)',
-              theraphyUrl: ergenLinkUrl,
-            ),
-            AppointmentCardWidget(
-              theraphyImage: 'yapilandirilmis_oyun_terapisi.png',
-              therapyName: 'Yapılandırılmış Oyun Terapisi (Ebeveyn)',
-              theraphyUrl: ebeveynLinkUrl,
-            ),
-          ],
-        )),
+          child: Column(
+            children: [
+              AppointmentCardWidget(
+                  theraphyImage: 'bireysel_terapi_yetiskin.png',
+                  therapyName: 'Bireysel Terapi (Yetişkin)',
+                  theraphyUrl: yetiskinLinkUrl),
+              AppointmentCardWidget(
+                theraphyImage: 'bireysel_terapi_ergen.png',
+                therapyName: 'Bireysel Terapi (Ergen)',
+                theraphyUrl: ergenLinkUrl,
+              ),
+              AppointmentCardWidget(
+                theraphyImage: 'yapilandirilmis_oyun_terapisi.png',
+                therapyName: 'Yapılandırılmış Oyun Terapisi (Ebeveyn)',
+                theraphyUrl: ebeveynLinkUrl,
+              ),
+            ],
+          ),
+        ),
       ),
       floatingActionButton: MyFAB(),
     );

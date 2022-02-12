@@ -40,50 +40,52 @@ class _HomePageState extends State<HomePage> {
     String instagramUrl = "https://www.instagram.com/terapidukkaniofficial/";
 
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          elevation: 0,
-          actions: [
-            IconButton(
-              icon: Icon(FontAwesomeIcons.instagram),
-              onPressed: () => openUrl(instagramUrl),
-            )
-          ],
-          title: Text('Terapi Dükkanım'),
-        ),
-        body: bottomNavigatorBarSelectedItem(selectedIndex),
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.shifting,
-          currentIndex: selectedIndex,
-          backgroundColor: Colors.blue,
-          selectedItemColor: Colors.white,
-          items: [
-            BottomNavigationBarItem(
-              backgroundColor: Colors.blue,
-              icon: Icon(FontAwesomeIcons.home),
-              label: 'Anasayfa',
+      appBar: AppBar(
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(
+              FontAwesomeIcons.instagram,
             ),
-            BottomNavigationBarItem(
-              backgroundColor: Colors.blue,
-              icon: Icon(FontAwesomeIcons.users),
-              label: 'Personel',
-            ),
-            BottomNavigationBarItem(
-              backgroundColor: Colors.blue,
-              icon: Icon(FontAwesomeIcons.star),
-              label: 'Hizmetlerimiz',
-            ),
-            BottomNavigationBarItem(
-              backgroundColor: Colors.blue,
-              icon: Icon(FontAwesomeIcons.mailBulk),
-              label: 'İletişim',
-            ),
-          ],
-          onTap: (int index) {
-            selectedIndex = index;
-            setState(() {});
-          },
-        ),
-        floatingActionButton: MyFAB());
+            onPressed: () => openUrl(instagramUrl),
+          )
+        ],
+        title: Text('TerapiDükkanım.com'),
+      ),
+      body: bottomNavigatorBarSelectedItem(selectedIndex),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.shifting,
+        currentIndex: selectedIndex,
+        backgroundColor: Colors.blue,
+        selectedItemColor: Colors.white,
+        items: [
+          BottomNavigationBarItem(
+            backgroundColor: Colors.blue,
+            icon: Icon(FontAwesomeIcons.home),
+            label: 'Anasayfa',
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Colors.blue,
+            icon: Icon(FontAwesomeIcons.users),
+            label: 'Personel',
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Colors.blue,
+            icon: Icon(FontAwesomeIcons.star),
+            label: 'Hizmetlerimiz',
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Colors.blue,
+            icon: Icon(FontAwesomeIcons.mailBulk),
+            label: 'İletişim',
+          ),
+        ],
+        onTap: (int index) {
+          selectedIndex = index;
+          setState(() {});
+        },
+      ),
+      floatingActionButton: MyFAB(),
+    );
   }
 }

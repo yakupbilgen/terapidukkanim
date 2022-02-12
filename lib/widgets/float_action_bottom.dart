@@ -8,12 +8,12 @@ class MyFAB extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String phoneNumber = '+905453798993';
+    String whatsappNumber = "https://api.whatsapp.com/send?phone=905453798993";
 
     return FloatingActionButton(
       child: Icon(FontAwesomeIcons.whatsapp),
       backgroundColor: Colors.green,
-      onPressed: () => openUrl('tel:$phoneNumber'),
+      onPressed: () => openUrl(whatsappNumber),
     );
   }
 }

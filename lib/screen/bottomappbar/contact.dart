@@ -18,9 +18,13 @@ class ContactScreenBottomBar extends StatelessWidget {
               child: Column(
             children: [
               ContactScreenText(text: 'Bizlere'),
-              ElevatedButton(
+              TextButton(
                 onPressed: () => openUrl("mailto:$mailAdress"),
-                child: Text('iletisim@terapidukkanim.com'),
+                child: Text(
+                  'iletisim@terapidukkanim.com',
+                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                      color: Colors.white, backgroundColor: Colors.blue),
+                ),
               ),
               ContactScreenText(text: 'Adresinden ulabilirsiniz.'),
               ContactScreenText(text: '\nUnutmayın!'),
