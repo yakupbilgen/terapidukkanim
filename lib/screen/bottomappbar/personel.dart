@@ -25,10 +25,67 @@ class PersonelScreenBottomBar extends StatelessWidget {
 
     Bireysel Terapi, Aile ve Çift Terapisi, Grup Terapisi (Yapılandırılmış Oyun Terapisi Ebeveyn Eğitimi) alanlarında danışan kabul etmekteyim.""";
 
+<<<<<<< HEAD
     return Scaffold(
       body: Container(
         child:
             PersonelWidget(image: image, title: title, name: name, desc: desc),
+=======
+    final String elifNurImage = 'assets/images/personel/elifnur.png';
+    final String elifnurTitle = 'Psikolojik Danışman';
+    final String elifnurName = 'Elif Nur ERGÜN';
+    final String elifnurText =
+        """    2019 yılında Bahçeşehir Üniversitesi Eğitim Bilimleri Fakültesi Psikolojik Danışmanlık ve Rehberlik bölümünden mezun oldum.
+
+    2016-2019 Bahçeşehir Üniversitesi'nde Yrd. Dr. Nevin Dölek, Prof. Dr. Aynur Eren Gümüş, Prof. Dr. Özlem Karaırmak, Prof. Dr. Berna Güloğlu ve Prof. Dr. Bilge Uzun'dan birden fazla ders alarak ve Psikodrama Enstitüsü'nden Deniz Altınay'dan ders alma fırsatı bularak ayrıcalıklı bir lisans hayatı geçirdim.
+
+    2019 yılında, mezuniyetimden sonra gönüllü psikolojik danışma veren ekiplerle çalıştım.
+
+    2021 Ocak – Mart tarihlerinde İngiltere'deki bir psikolojik danışmanlık şirketi olan Lifelong Counseling’ten EMDR eğitimi aldım, teorik, uygulama ve süpervizyon aşamasından geçtim. Sertifikamı aldım.
+
+    Şuan Life Psikoloji'den Cinsel Terapi ve Evlilik ve Çift Terapi eğitimini alıyorum.
+
+    Ergen ve Yetişkin bireylerle çalışıyorum.""";
+
+    final String seymaImage = 'assets/images/personel/seyma.png';
+    final String seymaTitle = 'Psikolojik Danışman';
+    final String seymaName = 'Şeyma ALBAYRAK';
+    final String seymaText =
+        """    2016 yılında Erciyes Üniversitesi Eğitim Bilimleri Fakültesi Psikolojik Danışmanlık ve Rehberlik bölümünden mezun oldum.
+
+    2014-2016 yılları arasında ortaöğretim kurumlarında stajlarımı tamamladım. Ardından yaklaşık iki yıl ortaöğretim kurumlarında psikolojik danışmanlık yaptım. Şu an hala özel eğitim kurs merkezlerinde psikolojik danışmanlık hizmeti sunmaktayım.
+
+    Eğitim sürecimde ve sonrasında almış olduğum eğitimler; Hipnotik Yeniden İşleme Terapisi, Bilişsel Davranışçı Terapi, Çözüm Odaklı Kısa Süreli Terapi, Aile Danışmanlığı, Filial Terapi, Çocuk Resimlerinin Psiko-Pedagojik Analizi ve Çocuk Testleri Eğitimi, Projektif Testler, Çocuk İstismarında İlk Görüşme Teknikleri. Bireysel Terapi (Ergen-Yetişkin) , Aile Terapisi ve Ebeveyn-Çocuk İlişkisine (Filial Terapi) yönelik danışan kabul etmekteyim.""";
+    return DefaultTabController(
+      initialIndex: 1,
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          titleSpacing: 0,
+          centerTitle: true,
+          bottom: TabBar(
+            tabs: <Widget>[
+              Tab(
+                icon: CircleAvatar(child: Image.asset(elifNurImage)),
+              ),
+              Tab(
+                icon: CircleAvatar(child: Image.asset(ayseImage)),
+              ),
+              Tab(
+                icon: CircleAvatar(child: Image.asset(seymaImage)),
+              ),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: <Widget>[
+            PersonelWidget(
+                title: elifnurTitle, name: elifnurName, text: elifnurText),
+            PersonelWidget(title: ayseTitle, name: ayseName, text: ayseText),
+            PersonelWidget(title: seymaTitle, name: seymaName, text: seymaText),
+          ],
+        ),
+>>>>>>> a4553cf46fd2e98e7c8f45bc6c5d1f6361bfe361
       ),
     );
   }
