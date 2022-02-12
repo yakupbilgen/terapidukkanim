@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../widgets/appointment_button.dart';
 import '../../widgets/services_screen_text.dart';
 
 class ServicesScreenBottomBar extends StatelessWidget {
@@ -32,10 +33,7 @@ class ServicesScreenBottomBar extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                ElevatedButton(
-                    onPressed: () =>
-                        Navigator.pushNamed(context, "/appointmentScreen"),
-                    child: Text('Randevu Almak İçin Tıklayın')),
+                AppointmentButton()
               ],
             ),
           ),

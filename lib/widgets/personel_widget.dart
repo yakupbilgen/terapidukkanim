@@ -1,41 +1,57 @@
 import 'package:flutter/material.dart';
 
+import 'appointment_button.dart';
+
 class PersonelWidget extends StatelessWidget {
-  PersonelWidget(
-      {Key key, @required this.title, @required this.name, @required this.text})
-      : super(key: key);
+  final String image;
   final String title;
   final String name;
-  final String text;
+  final String desc;
+
+  PersonelWidget(
+      {Key key,
+      @required this.image,
+      @required this.title,
+      @required this.name,
+      @required this.desc})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Size deviceSize = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Container(
-        margin: EdgeInsets.all(10),
+        padding: EdgeInsets.only(left: 10, right: 10),
         child: Column(
           children: [
+            SizedBox(
+              width: deviceSize.width,
+              height: deviceSize.height * 0.2,
+              child: Image.asset(this.image),
+            ),
+            SizedBox(height: 20),
             Text(
               title,
               style: TextStyle(
                   fontSize: Theme.of(context).textTheme.headline5.fontSize,
                   fontWeight: FontWeight.bold),
             ),
+            SizedBox(height: 20),
             Text(
               name,
               style: TextStyle(
                   fontSize: Theme.of(context).textTheme.headline5.fontSize,
                   fontWeight: FontWeight.bold),
             ),
+            SizedBox(height: 20),
             Text(
-              text,
+              desc,
               style: TextStyle(
                   fontSize: Theme.of(context).textTheme.headline6.fontSize),
             ),
-            ElevatedButton(
-                onPressed: () =>
-                    Navigator.pushNamed(context, "/appointmentScreen"),
-                child: Text('Randevu Almak İçin Tıklayınız.'))
+            SizedBox(height: 20),
+            AppointmentButton(),
+            SizedBox(height: 20),
           ],
         ),
       ),

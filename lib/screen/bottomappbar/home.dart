@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:terapidukkanim/widgets/appointment_button.dart';
 
 class HomeScreenBottomBar extends StatelessWidget {
   final String title = 'Terapiye İlişkin Bazı Bilgiler';
@@ -11,44 +12,38 @@ class HomeScreenBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(20),
+      margin: EdgeInsets.all(10),
       child: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
               Text(
                 title,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: Theme.of(context).textTheme.headline5.fontSize,
-                ),
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6
+                    ?.copyWith(fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
               Text(
                 subTitle,
-                style: TextStyle(
-                  fontSize: Theme.of(context).textTheme.headline6.fontSize,
-                ),
+                style: Theme.of(context).textTheme.headline6,
               ),
               SizedBox(height: 50),
               Text(
                 contentTitle,
-                style: TextStyle(
-                  fontSize: Theme.of(context).textTheme.headline6.fontSize,
-                ),
+                style: Theme.of(context).textTheme.headline6,
               ),
               SizedBox(height: 10),
               Text(
                 contentSubTitle,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: Theme.of(context).textTheme.headline6.fontSize),
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6
+                    ?.copyWith(fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
-              ElevatedButton(
-                  onPressed: () =>
-                      Navigator.pushNamed(context, "/appointmentScreen"),
-                  child: Text('Randevu Almak İçin Tıklayın')),
+              AppointmentButton(),
             ],
           ),
         ),
