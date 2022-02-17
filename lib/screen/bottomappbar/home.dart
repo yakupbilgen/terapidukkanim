@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:terapidukkanim/widgets/appointment_button.dart';
+
+import '../../widgets/appointment_button.dart';
 
 class HomeScreenBottomBar extends StatelessWidget {
   final String title = 'Terapiye İlişkin Bazı Bilgiler';

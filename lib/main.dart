@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './screen/homepage_screen.dart';
-import './screen/appointment_screen.dart';
+import 'screen/appointment_screen.dart';
+import 'screen/homepage_screen.dart';
 
 main() {
   runApp(
