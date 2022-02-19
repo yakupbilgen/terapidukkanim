@@ -6,6 +6,7 @@ import 'screen/homepage_screen.dart';
 main() {
   runApp(
     MaterialApp(
+      theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes: {
