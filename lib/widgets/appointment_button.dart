@@ -6,12 +6,13 @@ class AppointmentButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size deviceSize = MediaQuery.of(context).size;
+
     return Container(
-      width: deviceSize.width - 20,
+      width: deviceSize.width,
       height: deviceSize.height * 0.07,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(
-            Radius.circular(100),
+            Radius.circular(50),
           ),
           color: Colors.red),
       child: TextButton(

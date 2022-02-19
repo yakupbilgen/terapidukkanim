@@ -4,20 +4,21 @@ import '../../widgets/appointment_button.dart';
 import '../../widgets/services_screen_text.dart';
 
 class ServicesScreenBottomBar extends StatelessWidget {
+  const ServicesScreenBottomBar({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-          child: Column(
+    return Center(
+      child: Column(
         children: [
-          Expanded(
+          const Expanded(
             flex: 1,
             child: SizedBox(),
           ),
           Expanded(
             flex: 2,
             child: Column(
-              children: [
+              children: const [
                 FirstText(firstText: 'Aile Terapisi'),
                 SubText(subText: 'Nitelikli Hizmet'),
                 SizedBox(
@@ -37,12 +38,12 @@ class ServicesScreenBottomBar extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
+          const Expanded(
             flex: 1,
             child: SizedBox(),
           ),
         ],
-      )),
+      ),
     );
   }
 }

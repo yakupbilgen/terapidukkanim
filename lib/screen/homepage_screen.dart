@@ -9,6 +9,8 @@ import '../widgets/open_url_widget.dart';
 import 'bottomappbar/services.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -19,19 +21,15 @@ class _HomePageState extends State<HomePage> {
   bottomNavigatorBarSelectedItem(int selectedIndex) {
     switch (selectedIndex) {
       case 0:
-        return HomeScreenBottomBar();
-        break;
+        return const HomeScreenBottomBar();
       case 1:
-        return PersonelScreenBottomBar();
-        break;
+        return const PersonelScreenBottomBar();
       case 2:
-        return ServicesScreenBottomBar();
-        break;
+        return const ServicesScreenBottomBar();
       case 3:
-        return ContactScreenBottomBar();
-        break;
+        return const ContactScreenBottomBar();
       default:
-        return HomeScreenBottomBar();
+        return const HomeScreenBottomBar();
     }
   }
 
@@ -44,38 +42,41 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               FontAwesomeIcons.instagram,
+              color: Colors.red,
             ),
             onPressed: () => openUrl(instagramUrl),
           )
         ],
-        title: Text('TerapiDükkanım.com'),
+        title: Text(
+          'TerapiDukkanim.com',
+          style: Theme.of(context)
+              .textTheme
+              .headline6
+              ?.copyWith(color: Colors.red),
+        ),
       ),
       body: bottomNavigatorBarSelectedItem(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
         currentIndex: selectedIndex,
-        backgroundColor: Colors.blue,
-        selectedItemColor: Colors.white,
-        items: [
+        backgroundColor: Colors.red,
+        selectedItemColor: Colors.red,
+        items: const [
           BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
             icon: Icon(FontAwesomeIcons.home),
             label: 'Anasayfa',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
             icon: Icon(FontAwesomeIcons.users),
             label: 'Personel',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
             icon: Icon(FontAwesomeIcons.star),
             label: 'Hizmetlerimiz',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
             icon: Icon(FontAwesomeIcons.mailBulk),
             label: 'İletişim',
           ),
@@ -85,7 +86,7 @@ class _HomePageState extends State<HomePage> {
           setState(() {});
         },
       ),
-      floatingActionButton: MyFAB(),
+      floatingActionButton: const MyFAB(),
     );
   }
 }

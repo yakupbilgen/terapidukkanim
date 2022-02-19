@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/open_url_widget.dart';
 
 class AppointmentCardWidget extends StatelessWidget {
-  AppointmentCardWidget(
+  const AppointmentCardWidget(
       {Key key,
       @required this.theraphyImage,
       @required this.therapyName,
@@ -22,14 +22,44 @@ class AppointmentCardWidget extends StatelessWidget {
           children: [
             Image.asset("assets/images/$theraphyImage"),
             Center(
-                child: Text(
-              therapyName,
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )),
-            ElevatedButton(
-                onPressed: () => openUrl(theraphyUrl),
-                child: Text('Hemen Yer Ayırtın'))
+              child: Text(therapyName,
+                  style: Theme.of(context).textTheme.headline5),
+            ),
+            const SizedBox(height: 10),
+            CustomButton(theraphyUrl: theraphyUrl),
+            const SizedBox(height: 10),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  final String theraphyUrl;
+  const CustomButton({Key key, @required this.theraphyUrl}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size deviceSize = MediaQuery.of(context).size;
+
+    return Container(
+      width: deviceSize.width,
+      height: deviceSize.height * 0.06,
+      decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(
+            Radius.circular(50),
+          ),
+          color: Colors.red),
+      child: TextButton(
+        onPressed: () => openUrl(theraphyUrl),
+        child: Text(
+          'Randevu Almak İçin Tıklayın',
+          style: Theme.of(context)
+              .textTheme
+              .headline6
+              ?.copyWith(color: Colors.white),
+          textAlign: TextAlign.center,
         ),
       ),
     );

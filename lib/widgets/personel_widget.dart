@@ -8,7 +8,7 @@ class PersonelWidget extends StatelessWidget {
   final String name;
   final String desc;
 
-  PersonelWidget(
+  const PersonelWidget(
       {Key key,
       @required this.image,
       @required this.title,
@@ -21,37 +21,35 @@ class PersonelWidget extends StatelessWidget {
     Size deviceSize = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.only(left: 10, right: 10),
+        padding: const EdgeInsets.only(left: 10, right: 10),
         child: Column(
           children: [
             SizedBox(
               width: deviceSize.width,
               height: deviceSize.height * 0.2,
-              child: Image.asset(this.image),
+              child: Image.asset(image),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               title,
-              style: TextStyle(
-                  fontSize: Theme.of(context).textTheme.headline5.fontSize,
-                  fontWeight: FontWeight.bold),
+              style: Theme.of(context)
+                  .textTheme
+                  .headline5
+                  ?.copyWith(fontWeight: FontWeight.bold, color: Colors.red),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               name,
-              style: TextStyle(
-                  fontSize: Theme.of(context).textTheme.headline5.fontSize,
-                  fontWeight: FontWeight.bold),
+              style: Theme.of(context)
+                  .textTheme
+                  .headline5
+                  ?.copyWith(fontWeight: FontWeight.bold, color: Colors.red),
             ),
-            SizedBox(height: 20),
-            Text(
-              desc,
-              style: TextStyle(
-                  fontSize: Theme.of(context).textTheme.headline6.fontSize),
-            ),
-            SizedBox(height: 20),
-            AppointmentButton(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
+            Text(desc, style: Theme.of(context).textTheme.headline5),
+            const SizedBox(height: 20),
+            const AppointmentButton(),
+            const SizedBox(height: 20),
           ],
         ),
       ),

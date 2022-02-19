@@ -12,6 +12,8 @@ class AppointmentScreen extends StatelessWidget {
   final String ebeveynLinkUrl =
       "https://www.terapidukkanim.com/service-page/yap%C4%B1land%C4%B1r%C4%B1lm%C4%B1%C5%9F-oyun-terapisi-ebeveyn";
 
+  const AppointmentScreen({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,11 +27,16 @@ class AppointmentScreen extends StatelessWidget {
             children: [
               AppointmentCardWidget(
                   theraphyImage: 'bireysel_terapi_yetiskin.png',
-                  therapyName: 'Bireysel Terapi (Yetişkin)',
+                  therapyName: 'Bireysel Terapi - Yetişkin',
                   theraphyUrl: yetiskinLinkUrl),
               AppointmentCardWidget(
                 theraphyImage: 'bireysel_terapi_ergen.png',
-                therapyName: 'Bireysel Terapi (Ergen)',
+                therapyName: 'Bireysel Terapi - Ergen (13-18 Yaş)',
+                theraphyUrl: ergenLinkUrl,
+              ),
+              AppointmentCardWidget(
+                theraphyImage: 'bireysel_terapi_cocuk.png',
+                therapyName: 'Bireysel Terapi - Çocuk (7-12 Yaş)',
                 theraphyUrl: ergenLinkUrl,
               ),
               AppointmentCardWidget(
@@ -41,7 +48,7 @@ class AppointmentScreen extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: MyFAB(),
+      floatingActionButton: const MyFAB(),
     );
   }
 }

@@ -11,7 +11,7 @@ class MyFAB extends StatelessWidget {
     String whatsappNumber = "https://api.whatsapp.com/send?phone=905453798993";
 
     return FloatingActionButton(
-      child: Icon(FontAwesomeIcons.whatsapp),
+      child: const Icon(FontAwesomeIcons.whatsapp),
       backgroundColor: Colors.green,
       onPressed: () => openUrl(whatsappNumber),
     );

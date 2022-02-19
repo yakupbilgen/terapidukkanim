@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import '../../widgets/personel_widget.dart';
 
 class PersonelScreenBottomBar extends StatelessWidget {
+  const PersonelScreenBottomBar({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    final String image = 'assets/images/personel/ayse.png';
-    final String title = 'Klinik Psikolog';
-    final String name = 'Ayşe Refia UYSAL';
-    final String desc =
+    const String image = 'assets/images/personel/ayse.png';
+    const String title = 'Klinik Psikolog';
+    const String name = 'Ayşe Refia UYSAL';
+    const String desc =
         """    2017 yılında Fatih Sultan Mehmet Vakıf Üniversitesi Edebiyat Fakültesi Psikoloji lisans bölümünden mezun oldum.
 
     2020 yılında İstanbul Kent Üniversitesi Klinik Psikoloji yüksek lisansını tamamladım.
@@ -25,11 +27,8 @@ class PersonelScreenBottomBar extends StatelessWidget {
 
     Bireysel Terapi, Aile ve Çift Terapisi, Grup Terapisi (Yapılandırılmış Oyun Terapisi Ebeveyn Eğitimi) alanlarında danışan kabul etmekteyim.""";
 
-    return Scaffold(
-      body: Container(
-        child:
-            PersonelWidget(image: image, title: title, name: name, desc: desc),
-      ),
+    return const Scaffold(
+      body: PersonelWidget(image: image, title: title, name: name, desc: desc),
     );
   }
 }

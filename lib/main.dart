@@ -10,8 +10,8 @@ main() {
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes: {
-        "/": (context) => HomePage(),
-        "/appointmentScreen": (context) => AppointmentScreen(),
+        "/": (context) => const HomePage(),
+        "/appointmentScreen": (context) => const AppointmentScreen(),
       },
     ),
   );
